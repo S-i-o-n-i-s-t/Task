@@ -3,3 +3,13 @@
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами
 Console.WriteLine("Введите количество необходимых индексов для массива");
 int c = Convert.ToInt32(Console.ReadLine());
+string[] N = new string[c];
+void CreatingArray(string[] Name)
+{
+    for (int index = 0; index < Name.Length;index++)
+    { 
+        Name[index] = (Console.ReadLine());
+    }
+}
+Console.WriteLine("Заполните массив");
+CreatingArray(N);
