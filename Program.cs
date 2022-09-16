@@ -1,10 +1,22 @@
 ﻿// Написать программу, которая из имеющегося массива строк формирует массив из строк, длинна которых меньше либо равна 3 символа. 
 // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алкогитма.
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами
-void PrintArray(string[] Name)
+string[] N = new string[3];
+string[] M = new string[3]; 
+void ArrayEditor(string[] N, string[] M)
 {
-    for (int pozition = 0; pozition < Name.Length; pozition++)
+    int x = 0;
+    string O = "";
+    for (int i = 0; i < N.Length; i++)
     {
-        Console.Write($"{Name[pozition]} ");
+        O = N[i];
+        if (O.Length <= 3) 
+        {
+            M[x] = O;
+            Console.Write($"{M[x]}, ");
+            x = x++;
+        }
     }
 }
+Console.WriteLine("Ваш массив со строками, длинна которых, меньше или равна три символа");
+ArrayEditor(N,M);
